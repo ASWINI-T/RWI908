@@ -1,30 +1,20 @@
-package day12;
+package day13String;
 
 public class Palindrome {
-
 	public static void main(String[] args) {
-		int[] arr = {1, 2, 3, 4, 3, 2, 1}; // Example array
+        String original = "madam";
+        String reversed = "";
 
-        if (isPalindrome(arr)) {
-            System.out.println("The array is a palindrome.");
+        for (int i = original.length() - 1; i >= 0; i--) {
+            reversed += original.charAt(i);
+        }
+
+        if (original.equals(reversed)) {
+            System.out.println(original + " is a palindrome.");
         } else {
-            System.out.println("The array is not a palindrome.");
+            System.out.println(original + " is not a palindrome.");
         }
-    }
-
-    public static boolean isPalindrome(int[] arr) {
-        int left = 0;
-        int right = arr.length - 1;
-
-        while (left < right) {
-            if (arr[left] != arr[right]) {
-                return false; 
-            }
-            left++;
-            right--;
-        }
-        return true; 
-
+	    
 	}
 
 }
